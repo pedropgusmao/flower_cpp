@@ -125,7 +125,8 @@ int main()
   torch::save(net, stream);
   std::string str = stream.str();
   const char *chr = str.c_str();
-  // Probably send the contents of chr
+  // Probably send the contents of chr.
+  // This is a ZIP file. We need to read it as such in Python.
 
   //
   torch::save(net, "mytensor.pt");
